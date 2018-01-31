@@ -1,46 +1,57 @@
+package com.company;
+
 public class Cat extends Animal {
-    
-    private int paws;
-    
 
-    public static void main(String[]args){
+    private int claws;
 
-    }
-    public void setName(String name) {
-        this.name = name;
+    public Cat(int age, int paws, String name) {
+        super(age, paws, name);
     }
 
-    public String getName() {
-        return name;
-    }
-    public void setAge(int age) {
-        this.age = age;
+    public int getClaws() {
+        return claws;
     }
 
-    public int getAge( ) {
-        return age;
+    public void setClaws(int claws) {
+        this.claws = claws;
     }
-
-    public void setVoice(String voice) {
-        this.voice = voice;
-    }
-
-    public String getVoice() {
-        return voice;
-    }
-
-    public void setPaws(int paws) {
-        this.paws = paws;
-    }
-
-    public int getPaws() {
-        return paws;
+    @Override
+    public int getAge() {
+        return super.getAge();
     }
 
     @Override
-    public String toString() {
-        return  this.name + " " + this.age + " year  old, " + this.voice + " his voice "
-                 + paws + " Paws";
+    public void setAge(int age) {
+        super.setAge(age);
     }
 
+    @Override
+    public int getPaws() {
+        return super.getPaws();
+    }
+
+    @Override
+    public void setPaws(int paws) {
+        super.setPaws(paws);
+    }
+
+    @Override
+    public String getName() {
+        return super.getName();
+    }
+
+    @Override
+    public void setName(String name) {
+        super.setName(name);
+    }
+
+
+    @Override
+    public String toString() {
+        return "Cat{" + " Имя = " +getName()+" Лапы = "+getPaws()+
+                " Когтей = " + getClaws()+ " Возвраст = "+ getAge()+
+                '}';
+    }
 }
+
+

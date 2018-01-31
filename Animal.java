@@ -1,38 +1,45 @@
-import com.sun.org.apache.bcel.internal.classfile.Constant;
+package com.company;
 
 public abstract class Animal {
-    protected int age;
-    protected String name = "No name";
-    protected String voice = "Don't have Voice";
+    private int age;
+    private int paws;
+    private String name;
 
+ public Animal(int age, int paws, String name){
+     this.age = age;
+     this.paws = paws;
+     this.name = name;
+ }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public int getPaws() {
+        return paws;
+    }
+    public void setPaws(int paws) {
+        this.paws = paws;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-public static void main(String[]args){
-   Cat tor = new Cat();
-    tor.setName("Тор");
-    tor.setAge(2);
-    tor.setVoice("MEOWWWWWW");
-    tor.setPaws(4);
+    public static void main(String[]args){
 
-    //System.out.println(tor);
+     Cat cat = new Cat(2,4,"Tor");
+     cat.setClaws(20);
+     System.out.println(cat);
 
-    System.out.println(tor.getName()+" ему "+tor.getAge()+" года.");
-    System.out.println("Если разозлить кота, будет плохо: "+ tor.getVoice() +" !!!!!");
-    System.out.println("У  кота "+ tor.getPaws() + " ноги ");
+     Dog dog = new Dog(7,4,"Elbrus");
+     dog.setAgressive(true);
+     System.out.println(dog);
 
-//////////////////////////////////////////////////////////////////////////////////////////////
-    Dog elbrus  = new Dog();
-    elbrus.setName("Elbrus");
-    elbrus.setAggressive(true);
-
-
-    //System.out.println(elbrus);
-
-    System.out.println(elbrus.getName() + " Агресивный? " + elbrus.getAggressive());
-
+    }
 }
-
-
-}
-
 
 
