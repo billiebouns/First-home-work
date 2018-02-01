@@ -6,6 +6,7 @@ public class Dog extends Animal {
 
     public Dog(int age, int paws, String name) {
         super(age, paws, name);
+        setAgressive(true);
     }
 
     public boolean isAgressive() {
@@ -14,35 +15,6 @@ public class Dog extends Animal {
 
     public void setAgressive(boolean agressive) {
         this.agressive = agressive;
-    }
-    @Override
-    public int getAge() {
-        return super.getAge();
-    }
-
-    @Override
-    public void setAge(int age) {
-        super.setAge(age);
-    }
-
-    @Override
-    public int getPaws() {
-        return super.getPaws();
-    }
-
-    @Override
-    public void setPaws(int paws) {
-        super.setPaws(paws);
-    }
-
-    @Override
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName(name);
     }
 
     @Override
